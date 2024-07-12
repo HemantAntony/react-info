@@ -5,7 +5,18 @@
 body {
     margin: 0;
     font-family: Inter, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
     background-color: #23272dff;
+    width: 800px;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.65);
 }
 
 nav {
@@ -14,6 +25,7 @@ nav {
     background-color: #1e1e25ff;
     height: 150px;
     padding: 30px 25px;
+    border-radius: 10px;
 }
 
 nav > h3, nav > h4 {
@@ -48,12 +60,12 @@ nav > img {
 }
 
 .mainContent > h1 {
-    margin: 100px auto 0px 40px;
+    margin: 75px auto 0px 40px;
     font-size: 60px;
 }
 
 .facts {
-    margin: 50px 0px 0px 55px;
+    margin: 50px 60px 0px 55px;
 }
 
 .facts > li {
