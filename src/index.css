@@ -40,6 +40,11 @@ nav > img {
 
 .mainContent {
     color: white;
+    padding-bottom: 75px;
+    background-image: url(./images/background-logo.png);
+    background-repeat: no-repeat;
+    background-position: right 75%;
+    background-size: 200px;
 }
 
 .mainContent > h1 {
