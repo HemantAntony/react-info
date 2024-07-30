@@ -40,13 +40,67 @@ nav > h3 {
 
 nav > h4 {
     color: #DEEBF8;
-    font-size: 25px;
+    font-family: Poppins, sans-;
+    font-size: 16px;
     font-weight: 600;
 }
 
 nav > img {
     height: 65px;
     margin-right: 7px;
+}
+
+.navbar--toggle {
+    margin: 0.6rem;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.navbar--checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.navbar--slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: #ccc;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.navbar--slider::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.navbar--checkbox:checked + .navbar--slider {
+    background-color: #2196F3;
+}
+
+.navbar--checkbox:focus + .navbar--slider {
+    box-shadow: 0px 0px 1px #2196F3;
+}
+
+.navbar--checkbox:checked + .navbar--slider:before {
+    transform: translateX(18px);
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
 }
 
 .mainContent {

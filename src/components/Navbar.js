@@ -5,7 +5,12 @@ export default function Navbar() {
         <nav>
             <img src={logo} alt="React logo"/>
             <h3>ReactFacts</h3>
-            <h4>React Course - Project 1</h4>
+            <h4>Light</h4>
+            <label className="navbar--toggle">
+                <input type="checkbox" className="navbar--checkbox"/>
+                <span className="navbar--slider"></span>
+            </label>
+            <h4>Dark</h4>
         </nav>
     )
 }
