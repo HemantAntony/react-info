@@ -1,7 +1,7 @@
-export default function Main() {
+export default function Main({darkMode}) {
     return (
-        <div className="mainContent">
-            <h1>Fun facts about React</h1>
+        <div className={`mainContent ${darkMode ? "dark" : "light"}`}>
+            <h1 className="main--title">Fun facts about React</h1>
             <ul className="facts">
                 <li>Was first released in 2013</li>
                 <li>Was originally created by Jordan Walke</li>

@@ -18,34 +18,63 @@ body {
     box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.65);
 }
 
+.app.light {
+    background-color: #ffffff;
+}
+
 nav {
     display: flex;
     align-items: center;
     background-color: #1e1e25ff;
     height: 150px;
     padding: 30px 25px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-nav > h3, nav > h4 {
+nav.light {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 6px rgb(0, 0, 0, 0.25);
+}
+
+.nav--title, nav > h4 {
     margin: 0;
 }
 
-nav > h3 {
+.nav--title {
     margin-right: auto;
     color: #61DAFB;
     font-weight: 700;
     font-size: 45px;
 }
 
+nav.light .nav--title {
+    color: #00ABCA;
+}
+
 nav > h4 {
-    color: #DEEBF8;
     font-family: Poppins, sans-;
     font-size: 16px;
     font-weight: 600;
 }
 
-nav > img {
+nav.dark .nav--light {
+    color: #918E9B;
+}
+
+nav.light .nav--light {
+    color: #2B283A;
+}
+
+nav.dark .nav--dark {
+    color: #ffffff;
+}
+
+nav.light .nav--dark {
+    color: #D5D4D8;
+}
+
+.nav--image {
     height: 65px;
     margin-right: 7px;
 }
@@ -71,7 +100,7 @@ nav > img {
     right: 0;
     bottom: 0;
     border-radius: 20px;
-    background-color: #ccc;
+    background-color: #2B283A;
     transition: 0.2s;
     -webkit-transition: 0.2s;
 }
@@ -90,14 +119,15 @@ nav > img {
 }
 
 .navbar--checkbox:checked + .navbar--slider {
-    background-color: #2196F3;
+    background-color: #F5F5F5;
 }
 
 .navbar--checkbox:focus + .navbar--slider {
-    box-shadow: 0px 0px 1px #2196F3;
+    box-shadow: 0px 0px 1px #F5F5F5;
 }
 
 .navbar--checkbox:checked + .navbar--slider:before {
+    background-color: #222222;
     transform: translateX(18px);
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
@@ -106,13 +136,21 @@ nav > img {
 .mainContent {
     color: white;
     padding-bottom: 75px;
-    background-image: url(./images/background-logo.png);
+    background-image: url(./images/background-icon-dark.png);
     background-repeat: no-repeat;
     background-position: right 75%;
     background-size: 200px;
+    /* background-color: #23272dff; */
 }
 
-.mainContent > h1 {
+.mainContent.light {
+    /* background-color: #ffffff; */
+    color: #2B283A;
+    background-image: url(./images/background-icon-light.png);
+}
+
+.main--title {
+    display: inline-block;
     margin: 75px auto 0px 40px;
     font-size: 60px;
 }
@@ -129,4 +167,8 @@ nav > img {
 .facts > li::marker {
     font-size: 2.15rem;
     color: #61DAFB;
+}
+
+.mainContent.light .facts > li::marker {
+    color: #00ABCA;
 }
